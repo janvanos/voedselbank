@@ -27,7 +27,26 @@
         <h3 class="align_left">Vul de 6 vragen in die hieronder staan.<br>
             Klik daarna op de button "Kom ik in aanmerking?".<br>
             De berekening en de conclusie komen te voorschijn.</h3>
-        
+            <form action="">
+                <p>1. Uit hoeveel leden (volwassenen en kinderen) bestaat uw huishouden? (verplicht)</p>
+                <input type="number" name="leden" placeholder="Vul hier het aantal in"><br>
+
+                <p>2: Hoeveel netto inkomsten (Loon/salaris/uitkering/AOW) heeft u in uw huishouden? (verplicht)</p>
+                <input type="number" name="leden" placeholder="Vul hier het aantal in"><br>
+
+                <p>3: Hoeveel overige inkomsten (bijvoorbeeld huurtoeslag, zorgtoeslag, alimentatie, partnertoeslag, overige toeslagen, Kind Gebonden Budget, etc, maar geen kindertoeslag meetellen) ontvangt uw huishouden per maand? (verplicht)</p>
+                <input type="number" name="leden" placeholder="Vul hier het aantal in"><br>
+
+                <p>4: Hoeveel uitgaven (vaste lasten, bijvoorbeeld huur/hypotheek, energie (Gas/Licht) en water, zorgverzekering incl. eigen risico, overige noodzakelijke verzekeringen (bijvoorbeeld WA, opstal), gemeentelijke- en waterschapsbelastingen, schuldenaflossing (NIET die aan de familie) heeft uw huishouden per maand? (verplicht)</p>
+                <input type="number" name="leden" placeholder="Vul hier het aantal in"><br>
+
+                <p>5: Hoeveel overige uitgaven (bijvoorbeeld persoonlijke verzorging, TV/telefoon/internet, openbaar vervoer) heeft uw huishouden per maand? (verplicht)</p>
+                <input type="number" name="leden" placeholder="Vul hier het aantal in"><br>
+           
+                <p>6: Bent u het eens met de volgende voorwaarden (verplicht)?:</p>
+                <input type="checkbox" name="leden">Ja mee eens
+
+            </form>
         <footer>
             <img src="assets/img/voedselbank.png" alt="Voedselbank">
         </footer>
