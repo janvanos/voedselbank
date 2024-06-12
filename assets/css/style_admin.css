@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  padding: 5px;
+}
+header #menu {
+  width: 30px;
+  height: 33px;
+  border-radius: 3px;
+  border: 1px solid #707070;
+  padding: 3px;
+  color: #707070;
+  font-size: 23px;
+  text-align: center;
+  margin-left: auto;
+}
+
+h1 {
+  color: #ff7b00;
+  text-align: center;
+  margin-top: 20px;
+}
+
+form p {
+  color: #000;
+  font-weight: normal;
+}
+form label {
+  font-weight: bold;
+}
+form textarea {
+  width: 100%;
+  min-height: 75px;
+  padding: 5px;
+}
+form input[type=checkbox] {
+  width: auto;
+  padding: 5px;
+  margin-right: 5px;
+}
+form input[type=submit] {
+  width: 165px;
+  background: #ff7b00;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: underline;
+  padding: 5px;
+  cursor: pointer;
+}
+form#inschrijven input {
+  margin-top: 10px;
+}
+
+a {
+  color: #ff7b00;
+  font-weight: bold;
+  font-size: 14px;
+  padding-top: 20px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 30px;
+  background: #006600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 106px;
+}
+
+#bottom {
+  background: #686868;
+  color: #fff;
+  font-size: 10px;
+  text-align: center;
+}
+
+.success {
+  font-weight: bold;
+  color: #006600;
+  padding: 10px;
+  text-align: center;
+}/*# sourceMappingURL=style_admin.css.map */

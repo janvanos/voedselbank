@@ -22,16 +22,24 @@
             <img src="https://placehold.co/375x154" alt="Voedselbank">
         </figure>
         <h1>Voedselbank</h1>
+        <?php
+include("conn.php");
+$stmt = $conn->prepare("SELECT * FROM homepage");
+$stmt->execute();
+$result = $stmt->fetch();
+$conn = null;
+        ?>
         <h3>Welkom op de homepagina van Voedselbank Nederland</h3>
-        <p>Over Voedselbank Nederland</p>
-        <article>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend elit at purus molestie, id laoreet massa gravida. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis interdum pharetra lobortis. Suspendisse hendrerit arcu eget lectus sagittis, sed rutrum metus aliquam. Quisque nisi urna, ultrices et convallis at, aliquet ac mi. Sed vitae rutrum tortor. Maecenas in tellus id justo aliquam pulvinar ac et ligula. Nam vel facilisis nunc.</article>
-        <p>Zo berekenen we of jij in aanmerking komt voor een voedselpakket</p>
-        <article>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend elit at purus molestie, id laoreet massa gravida. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis interdum pharetra lobortis. Suspendisse hendrerit arcu eget lectus sagittis, sed rutrum metus aliquam. Quisque nisi urna, ultrices et convallis at, aliquet ac mi. Sed vitae rutrum tortor. Maecenas in tellus id justo aliquam pulvinar ac et ligula. Nam vel facilisis nunc.</article>
+        <p><?php echo $result["heading1"];?></p>
+        <article><?php echo $result["content1"];?></article>
+        <p><?php echo $result["heading2"];?></p>
+        <article><?php echo $result["content2"];?></article>
         <a href="rekenhulp.php">Kom ik in aanmerking?</a>
-        <footer>
+    </div>
+    <footer>
             <img src="assets/img/voedselbank.png" alt="Voedselbank">
         </footer>
-        <div id="bottom">© 2021   Voedselbank Nederland – KvK 67822037  – ANBI – RSIN 857187016</div>
-    </div>
+        <div id="bottom">© 2021   Voedselbank Nederland - KvK 67822037 - ANBI - RSIN 857187016</div>
+
 </body>
 </html>
