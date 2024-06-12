@@ -14,7 +14,7 @@
     <div id="container">
         <header>
             <figure>
-                <img src="assets/img/logo.png" alt="Voedselbank Logo">
+                <a href="index.php"><img src="assets/img/logo.png" alt="Voedselbank Logo"></a>
             </figure>
             <a id="menu">
                 <i class="fa fa-bars"></i>
@@ -59,26 +59,26 @@
     Na invulling van het formulier wordt contact met u opgenomen.
     </p>";
 
-    ?>
-<form action="inschrijven.php" method="post" id="inschrijven">
-    <input type="text" name="voornaam" required placeholder="Voornaam">
-    <input type="text" name="achternaam" required placeholder="Achternaam">
-    <input type="text" name="straat" required placeholder="Straat">
-    <input type="number" name="huisnummer" required placeholder="Huisnummer">
-    <input type="text" name="postcode" required placeholder="Postcode">
-    <input type="text" name="plaats" required placeholder="Plaats">
-    <input type="email" name="email" required placeholder="E-mailadres">
-    <input type="submit" name="inschrijven" value="Aanmelden">
-</form>
+        ?>
+                <form action="inschrijven.php" method="post" id="inschrijven">
+                    <input type="text" name="voornaam" required placeholder="Voornaam">
+                    <input type="text" name="achternaam" required placeholder="Achternaam">
+                    <input type="text" name="straat" required placeholder="Straat">
+                    <input type="number" name="huisnummer" required placeholder="Huisnummer">
+                    <input type="text" name="postcode" required placeholder="Postcode">
+                    <input type="text" name="plaats" required placeholder="Plaats">
+                    <input type="email" name="email" required placeholder="E-mailadres">
+                    <input type="submit" name="inschrijven" value="Aanmelden">
+                </form>
 
-    <?php
+            <?php
 
             } else {
                 echo "<p class='advies'>U komt <span class='nadruk red'>NAAR ALLE WAARSCHIJNLIJKHEID NIET</span> in aanmerking voor een voedselpakket. Klik <a href='https://www.voedselbankutrecht.nl/' targer='_blank'>hier</a> om te kijken welke voedselbank bij u in de buurt is om nader te bepalen of we u van dienst kunnen zijn.";
             }
             $conn = null;
         } else {
-        ?>
+            ?>
             <h3 class="align_left">Vul de 6 vragen in die hieronder staan.<br>
                 Klik daarna op de button "Kom ik in aanmerking?".<br>
                 De berekening en de conclusie komen te voorschijn.</h3>
@@ -108,9 +108,9 @@
         ?>
     </div>
     <footer>
-            <img src="assets/img/voedselbank.png" alt="Voedselbank">
-        </footer>
-        <div id="bottom">© 2021 Voedselbank Nederland – KvK 67822037 – ANBI – RSIN 857187016</div>
+        <img src="assets/img/voedselbank.png" alt="Voedselbank">
+    </footer>
+    <div id="bottom">© 2021 Voedselbank Nederland – KvK 67822037 – ANBI – RSIN 857187016</div>
 </body>
 
 </html>

@@ -25,6 +25,9 @@ header #menu {
   text-align: center;
   margin-left: auto;
 }
+header a {
+  padding: 0;
+}
 
 h1 {
   color: #ff7b00;

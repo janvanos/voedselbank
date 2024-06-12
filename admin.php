@@ -11,9 +11,9 @@
 
 <body>
     <div id="container">
-    <header>
+        <header>
             <figure>
-                <img src="assets/img/logo.png" alt="Voedselbank Logo">
+                <a href="admin.php"><img src="assets/img/logo.png" alt="Voedselbank Logo"></a>
             </figure>
             <a id="menu">
                 <i class="fa fa-bars"></i>
@@ -31,9 +31,9 @@
 
     </div>
     <footer>
-            <img src="assets/img/voedselbank.png" alt="Voedselbank">
-        </footer>
-        <div id="bottom">© 2021 Voedselbank Nederland – KvK 67822037 – ANBI – RSIN 857187016</div>
+        <img src="assets/img/voedselbank.png" alt="Voedselbank">
+    </footer>
+    <div id="bottom">© 2021 Voedselbank Nederland – KvK 67822037 – ANBI – RSIN 857187016</div>
 
 </body>
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voedselbank Admin Homepage Teksten</title>
+    <title>Voedselbank Admin Inschrijvingen</title>
     <link rel="stylesheet" href="assets/css/style_admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
@@ -22,6 +22,20 @@
         <div id="content">
             <?php
             include("conn.php");
+
+            if (isset($_GET['action']) && ($_GET['action'] == "delete")) {
+
+                $sql = "DELETE FROM inschrijving WHERE id=:deleteid";
+                $data = [
+                    'deleteid' => $_GET['id']
+                ];
+                $statement = $conn->prepare($sql);
+                try {
+                    $statement->execute($data);
+                    echo "<p class='success'>Record is verwijderd</p>";
+                } catch (PDOException $e) {
+                }
+            }
             if (isset($_POST["opslaan"])) {
 
                 $heading1 = $_POST['heading1'];
@@ -51,25 +65,20 @@
             }
 
 
-            $stmt = $conn->prepare("SELECT * FROM homepage");
+            $stmt = $conn->prepare("SELECT * FROM inschrijving");
             $stmt->execute();
-            $result = $stmt->fetch();
+            $result = $stmt->fetchAll();
+            echo "<table border='1'>";
+            foreach ($result as $row) {
+                echo "<tr><td style='width: 50px'>" . $row['id'] . "</td><td style='width: 100px'>" . $row['voornaam'] . "</td><td style='width: 200px'>" . $row['achternaam'] . " </td><td><a href='admin_inschrijving_edit.php?action=edit&id=" . $row['id'] . "'>Edit</a></td><td><a href='admin_inschrijvingen.php?action=delete&id=" . $row['id'] . "'>Delete</a></td></tr>";
+            }
+            echo "</table>";
+
+
+
             $conn = null;
             ?>
-            <form action="" method="post">
-                <label for="heading1">Heading1</label><br>
-                <textarea name="heading1"><?php echo $result["heading1"]; ?></textarea><br>
 
-                <label for="content1">Content 1</label><br>
-                <textarea name="content1"><?php echo $result["content1"]; ?></textarea><br>
-
-                <label for="heading2">Heading2</label><br>
-                <textarea name="heading2"><?php echo $result["heading2"]; ?></textarea><br>
-
-                <label for="content2">Content 2</label><br>
-                <textarea name="content2"><?php echo $result["content2"]; ?></textarea><br>
-                <input type="submit" name="opslaan" value="Opslaan">
-            </form>
         </div>
 
 
