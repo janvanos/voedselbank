@@ -29,23 +29,24 @@
             De berekening en de conclusie komen te voorschijn.</h3>
             <form action="">
                 <p>1. Uit hoeveel leden (volwassenen en kinderen) bestaat uw huishouden? (verplicht)</p>
-                <input type="number" name="leden" placeholder="Vul hier het aantal in"><br>
+                <input type="number" name="leden" required min="1" placeholder="Vul hier het aantal in"><br>
 
                 <p>2: Hoeveel netto inkomsten (Loon/salaris/uitkering/AOW) heeft u in uw huishouden? (verplicht)</p>
-                <input type="number" name="leden" placeholder="Vul hier het aantal in"><br>
+                <input type="number" name="inkomsten" required placeholder="Vul hier het aantal in"><br>
 
                 <p>3: Hoeveel overige inkomsten (bijvoorbeeld huurtoeslag, zorgtoeslag, alimentatie, partnertoeslag, overige toeslagen, Kind Gebonden Budget, etc, maar geen kindertoeslag meetellen) ontvangt uw huishouden per maand? (verplicht)</p>
-                <input type="number" name="leden" placeholder="Vul hier het aantal in"><br>
+                <input type="number" name="inkomsten2" required placeholder="Vul hier het aantal in"><br>
 
                 <p>4: Hoeveel uitgaven (vaste lasten, bijvoorbeeld huur/hypotheek, energie (Gas/Licht) en water, zorgverzekering incl. eigen risico, overige noodzakelijke verzekeringen (bijvoorbeeld WA, opstal), gemeentelijke- en waterschapsbelastingen, schuldenaflossing (NIET die aan de familie) heeft uw huishouden per maand? (verplicht)</p>
-                <input type="number" name="leden" placeholder="Vul hier het aantal in"><br>
+                <input type="number" name="uitgaven" required placeholder="Vul hier het aantal in"><br>
 
                 <p>5: Hoeveel overige uitgaven (bijvoorbeeld persoonlijke verzorging, TV/telefoon/internet, openbaar vervoer) heeft uw huishouden per maand? (verplicht)</p>
-                <input type="number" name="leden" placeholder="Vul hier het aantal in"><br>
+                <input type="number" name="uitgaven2" required placeholder="Vul hier het aantal in"><br>
            
                 <p>6: Bent u het eens met de volgende voorwaarden (verplicht)?:</p>
-                <input type="checkbox" name="leden">Ja mee eens
-
+                <input type="checkbox" name="voorwaarden" required>Ja mee eens
+                <br><br>
+                <input type="submit" value="Kom ik in aanmerking?">
             </form>
         <footer>
             <img src="assets/img/voedselbank.png" alt="Voedselbank">
