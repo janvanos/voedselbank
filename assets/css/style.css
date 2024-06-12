@@ -52,6 +52,21 @@ p {
   padding-bottom: 15px;
 }
 
+p.advies {
+  color: #000;
+  font-weight: normal;
+}
+p.advies .nadruk {
+  font-weight: bold;
+  color: #006600;
+}
+p.advies .nadruk.red {
+  color: red;
+}
+p.advies a {
+  padding: 0;
+}
+
 form p {
   color: #000;
   font-weight: normal;
@@ -72,6 +87,9 @@ form input[type=submit] {
   text-align: center;
   border-radius: 5px;
   text-decoration: underline;
+}
+form#inschrijven input {
+  margin-top: 10px;
 }
 
 a {
